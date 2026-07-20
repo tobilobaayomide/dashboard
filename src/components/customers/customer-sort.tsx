@@ -54,14 +54,14 @@ export function CustomerSort({ query }: CustomerSortProps) {
         Sort customers
       </label>
       <span className="pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-xs text-[#7E7E7E]">
-        Sort by:
+        Sort by :
       </span>
       <select
         id="customer-sort"
         value={selectedValue}
         disabled={isPending}
         onChange={(event) => handleSortChange(event.target.value)}
-        className="h-10 w-full appearance-none rounded-xl bg-[#F9FBFF] py-2 pl-15.5r-9 text-xs font-semibold text-[#3D3C42] outline-none focus-visible:ring-2 focus-visible:ring-[#5932EA]/30 disabled:cursor-wait disabled:opacity-70 sm:min-w-38.5"
+        className="h-10 w-full appearance-none rounded-xl bg-[#F9FBFF] py-2 pl-17 pr-9 text-xs font-semibold text-[#3D3C42] outline-none focus-visible:ring-2 focus-visible:ring-[#5932EA]/30 disabled:cursor-wait disabled:opacity-70 sm:min-w-38.5"
       >
         {sortOptions.map((option) => (
           <option key={option.value} value={option.value}>
