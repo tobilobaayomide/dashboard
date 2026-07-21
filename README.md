@@ -101,11 +101,11 @@ The search and sorting controls only update the URL. They do not fetch customer 
 
 ## Streaming and Suspense
 
-The dashboard also uses a focused `<Suspense>` boundary around the customer data section.
+The customer data section is wrapped in a focused `<Suspense>` boundary.
 
-The dashboard shell and header can render immediately, while the API-dependent metrics, table, and pagination stream in with a matching skeleton fallback.
+This allows the dashboard shell and header to render immediately while the API-dependent metrics, table, and pagination stream in with a matching skeleton during the initial load.
 
-I kept this as one data boundary instead of splitting the metrics and table into separate boundaries because they depend on the same API response. Splitting them further would add complexity without creating meaningful independent loading.
+I kept the metrics and table inside one boundary because they depend on the same API response. I also avoided resetting the boundary on every search, sort, or pagination change, so previously loaded content stays visible during server transitions while the controls show pending feedback.
 
 ## URL as the Source of Truth
 
