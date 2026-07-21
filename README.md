@@ -394,36 +394,6 @@ I did not invent active status, growth percentages, or online users just to repr
 
 Where the API and Figma differed, I documented the decision and used values supported by the real data.
 
-## Testing
-
-I tested the following:
-
-- default customer list;
-- page navigation;
-- search;
-- search clearing;
-- sorting;
-- sorting while searching;
-- pagination while searching;
-- browser back and forward navigation;
-- invalid URL values;
-- empty search results;
-- out-of-range page redirects;
-- loading state;
-- API failure state;
-- retry behaviour;
-- expanded sidebar;
-- compact sidebar;
-- mobile navigation;
-- table overflow;
-- production build.
-
-The project was also verified with:
-
-```bash
-npm run lint
-npm run build
-```
 
 ## What I Would Improve With More Time
 
