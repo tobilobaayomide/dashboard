@@ -17,10 +17,7 @@ export default async function CustomersPage({ searchParams }: CustomersPageProps
     <main className="min-h-dvh px-4 py-6 sm:px-6 lg:px-10 lg:py-8 xl:px-14 2xl:px-17.75">
       <DashboardHeader />
 
-      <Suspense
-        key={`${query.query}-${query.page}-${query.sortBy}-${query.order}`}
-        fallback={<CustomersContentSkeleton />}
-      >
+      <Suspense fallback={<CustomersContentSkeleton />}>
         <CustomersData query={query} />
       </Suspense>
     </main>
